@@ -27,6 +27,7 @@ namespace _14_12_2022
             string table = "<table class='table table-striped'> <tr><th>ID</th> <th>Name</th> <th>Age</th> <th>City</th> <th>Phone</th> <th>img_url</th>";
             while (sdr.Read())
             {
+
                 table += $"<tr><td>{sdr[0]}</td><td>{sdr[1]}</td><td>{sdr[2]}</td><td>{sdr[3]}</td><td>{sdr[4]}</td><td>{sdr[5]}</td></tr>";
                 Image image = new Image();
                 this.Controls.Add(image);
