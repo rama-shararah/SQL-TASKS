@@ -13,5 +13,17 @@ namespace _27_12_2022
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "alert",
+                "swal('Success!', 'You clicked login button!', 'success')", true);
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "alert",
+             "swal('Success!', 'You clicked signup button!', 'success')", true);
+        }
     }
 }
