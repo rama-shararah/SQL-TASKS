@@ -21,25 +21,27 @@ namespace _29_12_2022
             k.Values.Add("col", DropDownList1.SelectedValue);
             k.Expires = DateTime.Now;
             Response.Cookies.Add(k);
-            if (Request.Cookies["color"] != null)
-            {
-                if (Request.Cookies["color"]["col"] == "green")
-                {
-                    Label1.ForeColor = System.Drawing.Color.Green;
-                }
-                else if (Request.Cookies["color"]["col"] == "blue")
-                {
-                    Label1.ForeColor = System.Drawing.Color.Blue;
-                }
-                else if (Request.Cookies["color"]["col"] == "red")
-                {
-                    Label1.ForeColor = System.Drawing.Color.Red;
-                }
-                else
-                {
-                    Label1.ForeColor = System.Drawing.Color.Black;
-                }
-            }
+            Label1.Attributes.Add("style", $"color:{DropDownList1.SelectedValue}");
+            //if (Request.Cookies["color"] != null)
+            //{
+
+            //    if (Request.Cookies["color"]["col"] == "green")
+            //    {
+            //        Label1.ForeColor = System.Drawing.Color.Green;
+            //    }
+            //    else if (Request.Cookies["color"]["col"] == "blue")
+            //    {
+            //        Label1.ForeColor = System.Drawing.Color.Blue;
+            //    }
+            //    else if (Request.Cookies["color"]["col"] == "red")
+            //    {
+            //        Label1.ForeColor = System.Drawing.Color.Red;
+            //    }
+            //    else
+            //    {
+            //        Label1.ForeColor = System.Drawing.Color.Black;
+            //    }
+            //}
         }
 
         protected void Button1_Click(object sender, EventArgs e)
